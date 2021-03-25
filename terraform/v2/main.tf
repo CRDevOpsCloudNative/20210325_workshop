@@ -1,9 +1,9 @@
 terraform {
   required_providers {
-    # aws = {
-    #   source  = "hashicorp/aws"
-    #   version = "~> 3.27"
-    # }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.27"
+    }
   }
 }
 
@@ -76,5 +76,4 @@ resource "aws_instance" "bar" {
     network_interface_id = aws_network_interface.bar.id
     device_index         = 0
   }
-
 }

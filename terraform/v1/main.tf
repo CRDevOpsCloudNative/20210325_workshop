@@ -1,10 +1,5 @@
 terraform {
-  required_providers {
-    # aws = {
-    #   source  = "hashicorp/aws"
-    #   version = "~> 3.27"
-    # }
-  }
+  required_providers {}
 }
 
 provider "aws" {
@@ -29,6 +24,7 @@ resource "aws_subnet" "subnet_a" {
     Name = "tf-workshop"
   }
 }
+
 resource "aws_subnet" "subnet_b" {
   vpc_id            = aws_vpc.my_vpc.id
   cidr_block        = "172.16.11.0/24"
@@ -65,7 +61,6 @@ resource "aws_instance" "foo" {
     network_interface_id = aws_network_interface.foo.id
     device_index         = 0
   }
-
 }
 
 resource "aws_instance" "bar" {
@@ -76,5 +71,4 @@ resource "aws_instance" "bar" {
     network_interface_id = aws_network_interface.bar.id
     device_index         = 0
   }
-
 }
