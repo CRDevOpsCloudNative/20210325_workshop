@@ -72,3 +72,13 @@ resource "aws_instance" "bar" {
     device_index         = 0
   }
 }
+
+resource "aws_security_group" "aws_security_group" {
+  name        = "aws_security_group"
+  description = "aws_security_group"
+  vpc_id      = aws_vpc.my_vpc.id
+
+  tags = {
+    Name = "tf-workshop"
+  }
+}
