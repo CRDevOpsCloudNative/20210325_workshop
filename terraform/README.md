@@ -28,5 +28,5 @@ v2
 v3
 - declaracion por modulos
 
-![Infraestructura](/images/diagrama-arquirectura.png)
+![Infraestructura](/terraform/images/diagrama-arquirectura.png)
 Format: ![Alt Text](url)
