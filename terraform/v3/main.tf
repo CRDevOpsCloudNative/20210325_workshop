@@ -17,9 +17,6 @@ module "network" {
 }
 
 module "instances" {
-  # depends_on = [
-  #    module.network
-  # ]
   source = "./instances"
   aws_network_interface_foo = module.network.aws_network_interface_foo
   aws_network_interface_bar = module.network.aws_network_interface_bar
